@@ -2,8 +2,9 @@ import Cours from "./componentes/Cours"
 import Form from "./componentes/Form"
 import Profil from "./componentes/profil"
 import ProgressBar from "./componentes/ProgressBar"
-
+import Compteur from "./componentes/compteur"
 function App() {
+
   return (
     <div className="container">
       <h1 className="text-center">Profils Utilisatures </h1>
@@ -18,7 +19,7 @@ function App() {
         <div className="row">
           <div className="col-4">
             <Cours
-            image="/images/js.png"
+              image="/images/js.png"
               titre="Introduction au JavaScript"
               desc="Commencez le développement web en apprenant les bases du JavaScript."
               value={40}
@@ -26,7 +27,7 @@ function App() {
           </div>
           <div className="col-4">
             <Cours
-            image="/images/React.png"
+              image="/images/React.png"
               titre="React Fundamentals"
               desc="Maitrisez les concepts clés de React."
               value={80}
@@ -34,7 +35,7 @@ function App() {
           </div>
           <div className="col-4">
             <Cours
-            image="/images/Node.png"
+              image="/images/Node.png"
               titre=" Node.js & Express"
               desc=" Développement backend avec Node.js."
               value={50}
@@ -42,11 +43,27 @@ function App() {
           </div>
         </div>
       </div>
-<hr />
+      <hr />
       <div>
         <h1 className="text-center">Fourmulaire</h1>
         <Form />
       </div>
+      <br />
+      <div className="row">
+        <div className="d-flex justify-content-end mt-3">
+          <button className="btn btn-warning mx-4">
+            🛒 {Compteur}
+          </button>
+        </div>
+        
+        <div className="">
+          <Compteur imgProduit="/images/js.png" />
+        </div>
+
+      </div>
+
+
+
     </div>
 
 
